@@ -460,7 +460,7 @@ def run_v8_pipeline():
     print("\n" + "=" * 65)
     print("  STEP 1 · Loading Data")
     print("=" * 65)
-    client = MongoClient("mongodb://localhost:27017/")
+    client = MongoClient("mongodb+srv://dpuri60be24_db_user:dC1NO6p8dsQLoYI3@cluster0.ueglfet.mongodb.net/?appName=Cluster0")
     db     = client["Lignin"]
     df_eng = pd.DataFrame(list(db["engineered_features"].find({}, {"_id": 0})))
     df_val = pd.DataFrame(list(db["validation_dataset"].find({}, {"_id": 0})))
